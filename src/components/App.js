@@ -16,14 +16,14 @@ function App() {
       <AuthProvider>
         <Layout>
           <Routes>
-            <Route exact path="/" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/" element={<PublicOutlet />}>
-              <Route exact path="/signup" element={<Signup />} />
-              <Route exact path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/login" element={<Login />} />
             </Route>
             <Route path="/" element={<PrivateOutlet />}>
-              <Route exact path="/quiz/:id" element={<Quiz />} />
-              <Route exact path="/result" element={<Result />} />
+              <Route path="/quiz/:id" element={<Quiz />} />
+              <Route path="/result/:id" element={<Result />} />
             </Route>
           </Routes>
         </Layout>
